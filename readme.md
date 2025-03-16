@@ -58,13 +58,13 @@
 ### Clone the project
 
 ```bash
-  git clone https://github.com/RishiBakshii/mern-ecommerce.git
+  git clone https://github.com/Kavin1421/SowndEcomPR-1.git
 ```
 
 ### Navigate to the project directory
 
 ```bash
-  cd mern-ecommerce
+  cd SowndEcomPR-1
 ```
 
 ### Install dependencies for frontend and backend separately
@@ -148,13 +148,13 @@ REACT_APP_BASE_URL="http://localhost:8000"
 - Start the server: `npm start`
 - You should see a message indicating the server is running, usually on port 3000.
 
-### Login with demo account (Optional)
+<!-- ### Login with demo account (Optional)
 - After successfully seeding the database, you can now explore the application's functionalities using pre-populated sample data.
 - here are the `login credentials`
 ```bash
   email: demo@gmail.com
   pass: helloWorld@123
-```
+``` -->
 
 - **Please Note**: While the demo account provides a convenient way to explore many features, it has some limitations:
     - **Password Reset and OTP Verification**: Due to security reasons, the demo account uses a non-real email address. Therefore, password reset and OTP verification functionalities are not available for this account.
