@@ -125,13 +125,18 @@ export const AdminOrders = () => {
                     </TableCell>
                     <TableCell align="right">{order.total}</TableCell>
                     <TableCell align="right">
-                      <Stack>
-                        <Typography>{order.address[0].street}</Typography>
-                        <Typography>{order.address[0].city}</Typography>
-                        <Typography>{order.address[0].state}</Typography>
-                        <Typography>{order.address[0].postalCode}</Typography>
-                      </Stack>
+                      {order.address && order.address.length > 0 ? (
+                        <Stack>
+                          <Typography>{order.address[0].street || "No street info"}</Typography>
+                          <Typography>{order.address[0].city || "No city info"}</Typography>
+                          <Typography>{order.address[0].state || "No state info"}</Typography>
+                          <Typography>{order.address[0].postalCode || "No postal code"}</Typography>
+                        </Stack>
+                      ) : (
+                        <Typography color="error">No address available</Typography>
+                      )}
                     </TableCell>
+
                     <TableCell align="right">{order.paymentMode}</TableCell>
                     <TableCell align="right">{new Date(order.createdAt).toDateString()}</TableCell>
 
