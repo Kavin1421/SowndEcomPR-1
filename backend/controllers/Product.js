@@ -100,5 +100,15 @@ exports.deleteById=async(req,res)=>{
         res.status(500).json({message:'Error deleting product, please try again later'})
     }
 }
+exports.getProductCount = async (req, res) => {
+    try {
+        const totalProducts = await Product.countDocuments();
+        res.status(200).json({ totalProducts });
+    } catch (error) {
+        console.error("Error fetching product count:", error);
+        res.status(500).json({ message: "Error fetching product count, please try again later" });
+    }
+};
+
 
 

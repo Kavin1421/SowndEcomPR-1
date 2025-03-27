@@ -14,6 +14,7 @@ import { SignupPage } from "./SignupPage";
 import { UserOrdersPage } from "./UserOrdersPage";
 import { UserProfilePage } from "./UserProfilePage";
 import { WishlistPage } from "./WishlistPage";
+import { InventoryPage } from "./InventoryPage";
 
 export {
     SignupPage,
@@ -31,5 +32,6 @@ export {
     AddProductPage,
     AdminOrdersPage,
     WishlistPage,
-    OtpVerificationPage
+    OtpVerificationPage,
+    InventoryPage
 }
