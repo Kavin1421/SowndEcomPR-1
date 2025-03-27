@@ -36,6 +36,7 @@ const Inventory = () => {
     totalOrders: orders.length,
     pendingOrders: orders.filter((o) => o.status === "Pending").length,
     dispatchedOrders: orders.filter((o) => o.status === "Dispatched").length,
+    OutforDeliveryOrders: orders.filter((o) => o.status === "Out for Delivery").length,
     deliveredOrders: orders.filter((o) => o.status === "Delivered").length,
     cancelledOrders: orders.filter((o) => o.status === "Cancelled").length,
   };
@@ -44,12 +45,13 @@ const Inventory = () => {
   const pieData = [
     { name: "Pending", value: orderStats.pendingOrders },
     { name: "Dispatched", value: orderStats.dispatchedOrders },
+    { name: "Out for Delivery", value: orderStats.dispatchedOrders },
     { name: "Delivered", value: orderStats.deliveredOrders },
     { name: "Cancelled", value: orderStats.cancelledOrders },
   ];
 
   const barData = [
-    { name: "Orders", Total: orderStats.totalOrders },
+    { name: "Orders", Total: orderStats.totalOrders-1},
     { name: "Products", Total: productCount },
   ];
 
